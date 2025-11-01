@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>     //For Input Output
+
+///////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  FactRev
+//  Description:    It is use to display its factors in decreasing order
+//  Input:          integer
+//  Output:         integer
+//  Author:         Priyanka Vikas Bhor
+//  Date:           17/10/2025
+//
+////////////////////////////////////////////////////////////////////////////
+
+void FactRev(int iNo)
+{
+    int iCnt =0;
+
+    for(iCnt =iNo/2; iCnt >= 1; iCnt--)
+    {
+        if((iNo % iCnt)==0)
+        {
+          printf("%d\t",iCnt);
+        }
+    }
+}//End of FactRev
+
+////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the Application
+//
+///////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;                       //To accept Input
+
+    printf("Enter Number\n");
+    scanf("%d",&iValue);
+
+    FactRev(iValue);                       ///Function call
+
+    return 0;
+}///end of main
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Testcases Successfully handled by the application
+//  
+//  Input:12        Output: 6  4  3  2  1
+//
+//  Input:13        Output: 1
+//
+//  Input:10        Output: 5   2   1
+//
+////////////////////////////////////////////////////////////////////////
