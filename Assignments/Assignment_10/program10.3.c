@@ -1,0 +1,61 @@
+//Time Complexity:O(1)
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>                                       //for input output
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  KMtoMeter
+//  Description:    It is use to accept distance in kilometer and convert it into meter
+//                  (1 kilometer = 1000 meter)
+//  Input:          integer
+//  Output:         integer
+//  Author:         Priyanka Vikas Bhor
+//  Date:           24/10/2025
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int KMtoMeter(int iNo)
+{
+    int iMeter = 0;
+
+    iMeter = iNo * 1000;    //1KM = 1000 M             //Business logic
+
+    return iMeter;
+}//End of KMtoMeter
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the Application
+//
+////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+  int iValue =0;                                           //To accept input
+  int iRet = 0;                                            //to store result
+
+  printf("Enter Distance:");
+  scanf("%d",&iValue);
+
+  iRet = KMtoMeter(iValue);                                //Function call
+
+  printf("Distance in Meter:%d\n",iRet);
+
+  return 0;
+}//End of main
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases Successfully handled by the application
+//  
+//  Input:5        Output: 5000
+//
+//  Input:12        Output:12000
+//
+////////////////////////////////////////////////////////////////////////////////////////

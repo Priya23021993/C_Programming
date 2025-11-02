@@ -1,0 +1,59 @@
+//Time Complexity:O(1)
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>                //For Input Output
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  CircleArea
+//  Description:    It is use to calculate area of circle (consider PI as 3.14)
+//                  (Area = PI * Radius * Radius)
+//  Input:          float
+//  Output:         double
+//  Author:         Priyanka Vikas Bhor
+//  Date:           24/10/2025
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+double CircleArea(float fRadius)
+{
+    double dArea = 0.0;
+    dArea =(3.14 * fRadius * fRadius);              //Business Logic
+    return dArea;
+}//end of Circle Area
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the Application
+//
+////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    float fValue = 0.0;                               //To accept input
+    double dRet = 0.0;                                //To store result
+
+    printf("Enter radius:");
+    scanf("%f",&fValue);
+
+    dRet = CircleArea(fValue);                        //Function call
+
+    printf("Area of Circle is :%f",dRet);
+
+    return 0;
+
+}//End of main
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases Successfully handled by the application
+//  
+//  Input:5.3           Output: 88.2026
+//  Input:10.4          Output: 339.6224
+//
+////////////////////////////////////////////////////////////////////////////////////////
