@@ -1,0 +1,64 @@
+//Time Complexcity O(1)
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>                       //For input output
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  Number
+//  Description:    It is use to if number is less than 50 then print small,if it is 
+//                  greater than 50 and less than 100 then print medium,if it is grater
+//                  than 100 then print large
+//  Input:          integer
+//  Output:         character
+//  Author:         Priyanka Vikas Bhor
+//  Date:           22/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+void Number(int iNo)
+{
+    if(iNo < 50)
+    {
+        printf("small");
+    }
+    else if(iNo >=50 && iNo <= 100)
+    {
+        printf("Medium");
+    }
+    else{
+        printf("Large");
+    }
+}///End of number
+
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the Application
+//
+/////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+
+{
+    int iValue =0;                            //To accept input
+
+    printf("Enter Number:");
+    scanf("%d",&iValue);
+
+    Number(iValue);                           //function call
+    return 0;
+}   //End of main
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases Successfully handled by the application
+//  
+//  Input:75   Output: Medium
+//
+////////////////////////////////////////////////////////////////////////////////////////
