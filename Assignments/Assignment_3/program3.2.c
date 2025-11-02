@@ -25,7 +25,7 @@ void DisplayFactor(int iNo)
     {
         iNo = -iNo;
     }
-     for (i=1; i <= iNo; i++)
+     for (i=1; i < iNo; i++)
     {
        if((i % 2)==0)
        {
@@ -57,4 +57,5 @@ int main()
 //  
 //  Input:24        Output: 1  2  4  6  8  12
 //
+
 ///////////////////////////////////////////////////////////////////
