@@ -1,0 +1,68 @@
+
+//Time Complexity:o(N)
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file                              
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>                                  //For input output
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  print_factor
+//  Description:    It is use to print all factors of a number
+//  Input:          integer
+//  Output:         integer
+//  Author:         Priyanka Vikas Bhor
+//  Date:           26/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////////////
+
+int count_factors(int number)
+{
+    int i =0, iCount = 0;
+    
+    if(number < 0)
+    {
+        printf("Invalid Number\n");
+    }
+    for(i=1; i< number; i++)
+    {
+        if((number % i)==0)
+        {
+            iCount++;
+        }
+    }
+    return iCount;
+}//End of count_factors
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the Application
+//
+////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int number = 0;                                            //To accept input
+
+    printf("Enter Number:");
+    scanf("%d",&number);
+
+    printf("Total Factors:%d\n",count_factors(number));           //function call
+
+
+    return 0;
+}//End of main
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases Successfully handled by the application
+//  
+//  Input:10        Output:3  
+//
+//  Input:50        Output:5
+//
+////////////////////////////////////////////////////////////////////////////////////////
