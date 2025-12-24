@@ -1,6 +1,3 @@
-
-
-
 /* Accept number from user and display below Pattern.
    
   Input : 4
@@ -31,4 +28,6 @@ int main()
 
     Pattern(iValue);
     return 0;
+} 
+
 }
