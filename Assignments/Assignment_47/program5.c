@@ -1,0 +1,101 @@
+/* Consider Singly Linear Linked list to solve below problem statements
+
+   Count Prime Numbers
+  void CountPrime(PNODE Head);
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+
+struct node
+{
+   int Data;
+   struct node *next;
+};
+
+typedef struct node NODE;
+typedef struct node *PNODE;
+typedef struct node **PPNODE;
+
+void InsertFirst(PPNODE Head, int No)
+{
+    PNODE newn = NULL;
+
+    newn = (PNODE)malloc(sizeof(NODE));
+    newn -> Data = No;
+    newn -> next = NULL;
+
+    if(*Head == NULL)
+    {
+        *Head = newn;
+    }
+    else
+    {
+        newn -> next = *Head;
+        *Head = newn;
+    }
+}
+
+void Display(PNODE Head)
+{
+    while(Head != NULL)
+    {
+        printf("| %d | ->",Head -> Data);
+        Head = Head -> next;
+    }
+    printf("NULL\n");
+}
+
+bool IsPrime(int No)
+{ 
+    int i= 0;
+
+    if(No <2)
+    {
+        return false;
+    }
+    for(i = 2; i <= No/2; i++)
+    {
+        if(No % i == 0)
+        {
+            return false;
+        }
+    }
+   return true;
+}
+
+int CountPrime(PNODE Head)
+{
+    int iCnt = 0;
+
+    while(Head != NULL)
+    {
+        if(IsPrime(Head -> Data))
+        {
+            iCnt++;
+        }
+        Head = Head -> next;
+    }
+    return iCnt;
+}
+
+int main()
+{
+    PNODE First = NULL;
+    int iRet = 0;
+
+    InsertFirst(&First,51);
+    InsertFirst(&First,11);
+    InsertFirst(&First,28);
+    InsertFirst(&First,17);
+    InsertFirst(&First,101);
+
+    printf("Linked List is :\n");
+    Display(First);
+
+    iRet = CountPrime(First);
+    printf("Count of prime numbers : %d\n",iRet);
+    
+    return 0;
+}
